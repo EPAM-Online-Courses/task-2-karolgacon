@@ -23,7 +23,8 @@ public class GuessNumberGame {
             throw new IllegalArgumentException(e);
         }
         if (M > UsefulConstants.MAX_UPPER_BOUND || M < 1){
-            System.out.println(M + " to " + UsefulConstants.WRONG_ARGUMENT + " - nie jest w zakresie <1, " + UsefulConstants.MAX_UPPER_BOUND + ">");
+            System.out.println(M + " to " + UsefulConstants.WRONG_ARGUMENT + " - nie jest " +
+                    "w zakresie <1, " + UsefulConstants.MAX_UPPER_BOUND + ">");
             throw new IllegalArgumentException();
         }
     }
@@ -58,12 +59,14 @@ public class GuessNumberGame {
             } else {
                 System.out.println(UsefulConstants.YES);
                 ++counterOfTries;
-                System.out.println(UsefulConstants.CONGRATULATIONS + ", " + counterOfTries + " - ilość prób, w której zgadłeś liczbę " + randomNumber);
+                System.out.println(UsefulConstants.CONGRATULATIONS + ", " + counterOfTries + " - ilość prób, " +
+                        "w której zgadłeś liczbę " + randomNumber);
                 check = false;
             }
         } while (counterOfTries + 1 < limitOfTries + 1 && check);
         if (check){
-            System.out.println(UsefulConstants.UNFORTUNATELY + ", limit prób (" + limitOfTries + ") został wyczerpany. Liczba do odganięcia to "+ randomNumber);
+            System.out.println(UsefulConstants.UNFORTUNATELY + ", limit prób (" + limitOfTries + ") został wyczerpany." +
+                    " Liczba do odganięcia to "+ randomNumber);
         }
     }
 
