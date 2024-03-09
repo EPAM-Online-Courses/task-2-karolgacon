@@ -36,7 +36,7 @@ public class GuessNumberGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         int randomNumber = random.nextInt(M) + 1;
-        System.out.println("Zaczynamy! Zgadnij liczbę, która znajduje się w zakresie: <1," + M +">");
+        System.out.println("Zagrajmy! Zgadnij liczbę, która znajduje się w zakresie: <1," + M +">");
         int userGuess;
         int counterOfTries = 0;
         do {
@@ -71,13 +71,13 @@ public class GuessNumberGame {
     }
 
     public void progressBar(int counterOfTries, int limitOfTries){
-        String bar = "";
+        System.out.print("Próby: [");
         for (int i = 0; i < counterOfTries + 1; i++){
-            bar += "*";
+            System.out.print("*");
         }
         for (int i = 0; i < limitOfTries - (counterOfTries + 1); i++){
-            bar += ".";
+            System.out.print(".");
         }
-        System.out.println("Próby: [" + bar + "]");
+        System.out.println("]");
     }
 }
