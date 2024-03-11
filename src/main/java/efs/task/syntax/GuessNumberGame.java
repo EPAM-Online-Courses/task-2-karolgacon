@@ -15,7 +15,6 @@ public class GuessNumberGame {
     }
 
     public GuessNumberGame(String argument) {
-        //TODO: Implement the constructor
         try {
             M = Integer.parseInt(argument);
         } catch (NumberFormatException e) {
@@ -30,7 +29,6 @@ public class GuessNumberGame {
     }
 
     public void play() {
-        //TODO: Implement the method that executes the game session
         boolean check = true;
         int limitOfTries = (int) Math.abs(Math.floor(Math.log(M) / Math.log(2) + 1));
         Scanner scanner = new Scanner(System.in);
